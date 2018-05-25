@@ -89,5 +89,9 @@ footer {
   padding: 40px 0;
 }
 
+footer .contact a {
+  color: white;
+}
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */

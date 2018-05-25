@@ -2,49 +2,151 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="main.css">
+  <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+  <link rel="stylesheet"
+        href="main.css">
   <title>HTML Portfolio</title>
+  <link rel="stylesheet"
+        href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+        integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
 </head>
 <body>
+  <nav class="navbar navbar-default"
+       role="navigation">
+    <div class="navbar-header">
+      <button type="button"
+              class="navbar-toggle"
+              data-toggle="collapse"
+              data-target=".navbar-ex1-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand"
+         href="#">Chris</a>
+    </div>
 
-  <!--
-    Previous project placeholder begins
-  -->
-  <div class="header">
-    <h1>Morgan McCircuit</h1>
-    <h2>I write code</h2>
+    <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div id="carousel-id"
+       class="carousel slide"
+       data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-id"
+          data-slide-to="0"
+          class=""></li>
+      <li data-target="#carousel-id"
+          data-slide-to="1"
+          class=""></li>
+      <li data-target="#carousel-id"
+          data-slide-to="2"
+          class="active"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="item">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Who I Am</h1>
+            <p>Full stack developer</p>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>What I Do</h1>
+            <p>Develop Angular applications.</p>
+            <p>Mostly just type things.</p>
+          </div>
+        </div>
+      </div>
+      <div class="item active">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Next</h1>
+            <p>Start creating screencasts for developers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="left carousel-control"
+       href="#carousel-id"
+       data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control"
+       href="#carousel-id"
+       data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
   </div>
 
-  <div class="tagline">
-    <h3>Who I am</h3>
-    <p>Hi, my name is Morgan and I love to write code that is efficient.</p>
+  <div class="marketing">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <span class="fa fa-4x fa-gamepad"></span>
+          <h2>Video Games</h2>
+          <p>I enjoy playing video games to relax.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa fa-4x fa-code"></span>
+          <h2>Code</h2>
+          <p>I help out in open source where I can.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fas fa-4x fa-basketball-ball"></span>
+          <h2>Watching Sports</h2>
+          <p>I watch the Pelicans basketball team.</p>
+        </div>
+      </div>
+    </div>
   </div>
 
+  <footer>
+    <div class="container">
+      <h3>Get in Touch</h3>
+      <p class="contact">
+        <a href="https://github.com/cmckni3">
+          <i class="fab fa-fw fa-github"></i>
+          <span>
+            GitHub
+          </span>
+        </a>
+        <a href="https://twitter.com/@cmckni3">
+          <i class="fab fa-fw fa-twitter"></i>
+          <span>
+            Twitter
+          </span>
+        </a>
+      </p>
+    </div>
+  </footer>
 
-  <div class="skills">
-    <h3>What I do</h3>
-    <p>Here are some of the languages I use on a day-to-day.</p>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-    </ul>
-  </div>
-
-  <div class="contact">
-    <h3>Get in touch</h3>
-    <p>I live in the cloud and can't be seen. Send messages to the good people at <a target="_blank" href="https://twitter.com/codeschool">Code School</a> and they'll notify me.</p>
-  </div>
-  <!--
-    Previous project placeholder ends
-    (unused pieces will be deleted at the last task)
-  -->
-
-
-  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"
+          integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+          crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+          integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+          crossorigin="anonymous"></script>
 
 </body>
 </html>

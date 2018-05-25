@@ -123,14 +123,16 @@ describe('The webpage', () => {
         assert(columns.length === 3, 'Our `.row` element needs at least 3 column elements.');
       });
 
-      it('should have an icon with the glyphicon icon class @marketing-columns', () => {
+      it('should have an icon with the glyphicon or fa icon class @marketing-columns', () => {
         columns.forEach(column => {
-          const icon = column.querySelector('.glyphicon');
-          const iconClasses = Array.from(icon.classList);
-          assert(icon, 'Every marketing row column needs an icon.');
+          const icons = column.querySelectorAll('.glyphicon, .fa, .fas, .fab');
+          const iconClasses = Array.from(icons).map(icon => icon.classList).reduce((classes, classList) => {
+            return classes.concat(Array.from(classList));
+          }, []);
+          assert(icons.length > 0, 'Every marketing row column needs an icon.');
           assert(
-            iconClasses.find(className => className.startsWith('glyphicon-')),
-            'Our marketing icons needs a class that starts with `glyphicon-` to describe which icon graphic it should contain.'
+            iconClasses.find(className => className.startsWith('glyphicon-') || className.startsWith('fa-')),
+            'Our marketing icons needs a class that starts with `glyphicon-` or `fa-` to describe which icon graphic it should contain.'
           );
         });
       });
